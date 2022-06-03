@@ -1,0 +1,36 @@
+.encabezadoConteiner {
+    height: 50px;
+    width: 100%;
+    background-color: #1877f2;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.cabeceraTop {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    background-color: #3B5BCD;
+
+}
+.cabecera {
+    width: 100%;
+    height: 55px;
+    background-color: rgba(59, 91, 205, 1);
+}
+.logo{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 400;
+    width: 100%;
+    height: 55px;
+    margin-top: 17px;
+    margin-left: 10px;
+
+}

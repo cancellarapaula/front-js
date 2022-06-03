@@ -1,0 +1,32 @@
+
+.seccion-final-parrafo {
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: medium;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 150px;
+    word-wrap: break-word;
+
+}
+.seccion-final-parrafo2 {
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: medium;
+    font-weight: 700;
+    text-decoration: none;
+    word-wrap: break-word;
+
+}
+
+
+.seccion-final {
+
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+
+
+
+
+}
