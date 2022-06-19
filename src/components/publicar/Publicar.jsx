@@ -5,6 +5,10 @@ import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import {Modal} from '../modal/Modal';
 
 
+
+
+
+
 export default function Publicar() {
 
     const [estado, cambiarEstado] = useState(false);

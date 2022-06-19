@@ -31,14 +31,16 @@ const Modal = ({estado, cambiarEstado}) => {
     });
 
 
-    useEffect(() => {
+    useEffect( () => {
         const getHabilidades = async () => {
             const {data, statusCode} = await getGeneric(url2)
-            setHabilidad(data.habilidades);
-
+            setHabilidad(data.habilidades)
         }
         getHabilidades()
     }, [])
+
+
+    //////////////////////
 
 
     const vacanteData = [];
@@ -48,31 +50,33 @@ const Modal = ({estado, cambiarEstado}) => {
     const idDueño = userId;
     const estadoProy = 1;
     let vacanteProyecto = new Vacantes(4, 'DESCRIPCION', 1);
-    let listaVacantes = [];
-    let listaVacantes2 = [];
-   // console.log(vacanteProyecto)
-    listaVacantes.push(vacanteProyecto)
-    //listaVacantes=vacanteId;
-   // console.log(listaVacantes)
+    let listaVacantes =[];
+    let listaVacantes2 =[];
+    console.log(vacanteProyecto)
+  // listaVacantes.push(vacanteProyecto)
+
+   listaVacantes=vacanteId;
+    console.log("listaVacantes")
+    console.log(listaVacantes)
 
     // if( vacanteId.length > 0 ){
     //     (vacanteId.map((v)=>{
     //         listaVacantes.push(v);
     //     }))}
 
-    const handleClick = async ({preventDefault}) => {
-        //preventDefault();
+    const handleClick = async () => {
+
 
         let proyecto = new Proyecto(nombre.current.value,
-            descripcion.current.value,
-            estadoProy,
-            idDueño,
-            Number(montoMinimo.current.value),
-            listaVacantes)
+                                    descripcion.current.value,
+                                    estadoProy,
+                                    idDueño,
+                                    Number(montoMinimo.current.value),
+                                    listaVacantes)
 
-       /* console.log(proyecto)
+        console.log(proyecto)
         console.log("vacantes del proyecto")
-        console.log(proyecto.vacantes)*/
+        console.log(proyecto.vacantes)
 
         const {data, statusCode} = await postGeneric(url, proyecto)
 

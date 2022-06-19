@@ -24,17 +24,22 @@
 }
 .component-input-input{
     height: 50px;
-    border-radius: 8px;
-    border: 1px solid dimgray;
+    border-radius: 5px;
+    border-color: hsl(0deg 0% 80%);
+    border-style: solid;
     font-size: 18px;
     padding-left: 20px;
-
     top: 15px;
 }
+.component-input-input:focus{
 
+    outline-color: #2177f6;
+
+
+}
 .component-input-vacante{
     height: 50px;
-    border-radius: 8px;
+    border-radius: 5px;
     border: 1px solid dimgray;
     font-size: 18px;
     padding-left: 20px;
@@ -45,15 +50,20 @@
 
 .component-input-input2{
     min-height: 250px;
-    border-radius: 8px;
-    border: 1px solid dimgray;
+    border-radius: 4px;
+    border-color: hsl(0deg 0% 80%);;
     font-size: 18px;
     padding-left: 20px;
-
+    border-style: solid;
     top: 10px;
 
 }
+.component-input-input2:focus{
 
+    outline-color: #2177f6;
+
+
+}
 ::-webkit-scrollbar {
     width: 10px;
 }

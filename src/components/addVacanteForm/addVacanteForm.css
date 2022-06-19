@@ -24,13 +24,32 @@
 }
 
 .inputs{
-    border-radius: 5px;
+    border-radius: 4px;
+    border-style: solid;
+    height: 38px;
+    border-color: hsl(0deg 0% 80%);
+    width: 200px;
+    text-align: center;
+
 }
+
 
 .label{
     font-size: 16px;
     color: #000000;
     font-weight: 550;
+}
+
+.inputsSelect{
+    border-radius: 5px;
+    width: 200px;
+    border-color: black;
+
+
+}
+.inputs:focus{
+
+    outline-color: #2177f6;
 
 
 }

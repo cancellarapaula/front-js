@@ -15,9 +15,12 @@ export const getPosts = async()  => {
             id: post.id,
             nombre: post.nombre,
             descripcion: post.descripcion,
-            vacantes_abiertas_colaboradores: post.vacantes_abiertas_colaboradores,
             estado: post.estado,
-            monto_minimo_inversion: post.monto_minimo_inversion
+            monto_minimo_inversion: post.monto_minimo_inversion,
+            fechaCreacion: post.fechaCreacion,
+            vacantes: post.vacantes
+
+
         }
     })
     //console.log(posts);

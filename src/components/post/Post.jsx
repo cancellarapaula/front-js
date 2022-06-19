@@ -5,8 +5,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 export default function Post({post}) {
-
-
+    console.log(post);
     return(
         <div className="post">
             <div className="postWrapper">
@@ -19,7 +18,7 @@ export default function Post({post}) {
                         <span className="postNombre">
                         <p>Paula Cancellara</p>
             </span>
-                        <span className="postFecha">31/05/2022</span>
+                        <span className="postFecha">{post.fechaCreacion}</span>
                     </div>
                     <div className="postTopDerecha">
 
@@ -32,7 +31,7 @@ export default function Post({post}) {
                     <p className="titulo"> Descripción del proyecto </p>
                     <p className="informacion">{post.descripcion}</p>
                     <p className="titulo"> Vacantes disponibles  </p>
-                    <p className="informacion"> {post.vacantes_abiertas_colaboradores}</p>
+                    {/*<p className="informacion"> {post.vacantes}</p>*/}
                     <p className="titulo"> Monto mínimo de inversión </p>
                     <p className="informacion">{post.monto_minimo_inversion} </p>
                 </div>

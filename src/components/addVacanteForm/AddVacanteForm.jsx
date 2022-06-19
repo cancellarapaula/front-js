@@ -7,19 +7,20 @@ import Select from 'react-select';
 const AddVacanteForm = ({vacante, setVacante,vacanteId, setVacanteId, habilidad}) => {
 
 
-    const id = Math.random();
     const cantidad = useRef  (null);
     const descripcion = useRef  (null);
     const options = [];
-    let vacantes1;
+    let vacantesNombre;
     let vacantesId;
     let habilidadVacante;
     let nuevaVacante=[];
+
+    //guardo los nombres de las habilidades en la lista desplegable como "options"
     habilidad.forEach(function(habilidad, index) {
         options.push({value: `${habilidad.id}`, label: `${habilidad.nombre}`});
     });
 
-
+    ///hook para manejar las opciones de las habilidades
     const [hab,setHab] = useState({selectedOption:null});
     const handleChange = (selectedOption) =>{
         setHab({selectedOption});
@@ -27,19 +28,23 @@ const AddVacanteForm = ({vacante, setVacante,vacanteId, setVacanteId, habilidad}
 
     habilidadVacante = hab.selectedOption;
 
+
+
     const handleAdd = (e) => {
-        if(cantidad.current.value.lengh<=0 && habilidadVacante.label.length<=0 && descripcion.current.value.length<=0){
+
+        if(document.getElementById("cantidad").value==="" ||document.getElementById("habil").length === "" || document.getElementById("descrip").value==="" ){
+            e.preventDefault();
             alert('completar vacantes');
         }
         else {
             ///vacante para mostrar en pantalla
-          vacantes1 = new Vacantes(
+          vacantesNombre = new Vacantes(
 
                 habilidadVacante.label,
                 descripcion.current.value,
                 cantidad.current.value)
 
-            setVacante(vacan => [ ...vacan, vacantes1 ]);
+            setVacante([ ...vacante, vacantesNombre ]);
 
           //vacante para guardar en la base
             vacantesId = new Vacantes(
@@ -50,12 +55,8 @@ const AddVacanteForm = ({vacante, setVacante,vacanteId, setVacanteId, habilidad}
                 )
 
             nuevaVacante.push(vacantesId)
+            setVacanteId([...vacanteId, nuevaVacante.pop() ])
 
-            setVacanteId(vacanId => [ ...vacanId, nuevaVacante.pop() ])
-
-            console.log("vacantes nuevas en el add")
-            console.log(nuevaVacante)
-            console.log(vacanteId)
 
 
         }
@@ -72,17 +73,17 @@ const AddVacanteForm = ({vacante, setVacante,vacanteId, setVacanteId, habilidad}
             <div className="flex-inputs">
                 <div className="flex-inputs-label">
                     <label className="label">Cantidad de vacantes</label>
-                    <input type="number" min="1"  className="inputs" ref={cantidad} required/>
+                    <input type="number" min="1" id="cantidad" className="inputs" ref={cantidad} required/>
                 </div>
                 <div className="flex-inputs-label">
 
                     <label className="label">Habilidad</label>
-                    <Select className="inputs" options={options} onChange={handleChange}></Select>
+                    <Select className="inputsSelect" id="habil" options={options} onChange={handleChange} required></Select>
 
                 </div>
                 <div className="flex-inputs-label">
                     <label className="label">Descripción</label>
-                    <input type="text"  className="inputs" ref={descripcion} required/>
+                    <input type="text" id="descrip" className="inputs" ref={descripcion} required/>
                 </div>
                 <div className="flex-inputs-label">
                     <button className="agregarButton"  onClick={handleAdd}>+</button>

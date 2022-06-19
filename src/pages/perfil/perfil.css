@@ -1,0 +1,141 @@
+.perfilContainer{
+    display: flex;
+    width: 100%;
+
+}
+.perfil{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+
+    overflow-x: hidden;
+}
+.profile{
+display: flex;
+}
+
+.profileRight{
+    flex: 9;
+}
+
+.profileCover{
+    height: 320px;
+    position: relative;
+}
+
+.profileCoverImg{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.profileUserImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 150px;
+    border: 3px solid white;
+}
+
+.profileInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileInfoName{
+    font-size: 24px;
+}
+
+.profileInfoDesc{
+    font-weight: 300;
+}
+
+.perfilHr {
+    margin: 20px;
+}
+.cajaInformacion{
+    width: 80%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    margin-top: 50px;
+    margin-left: 120px;
+
+
+
+}
+
+.perfilWrapper {
+    padding: 10px;
+
+}
+
+.perfilCenter{
+    margin: 20px 0;
+}
+
+.tituloInformacion{
+    font-size: 20px;
+    margin-left: 30px;
+    font-weight: 500;
+    color: black;
+
+}
+
+.subtituloInformacion{
+    font-size: 18px;
+    margin-left: 5px;
+    font-weight: 450;
+    color: black;
+
+
+}
+
+.infoCargada{
+    font-size: 18px;
+    margin-left: 70px;
+    font-weight: 500;
+    color: #3B5BCD;
+    margin-top: 5px;
+}
+
+.cajaDatos{
+    margin-top: 30px;
+
+}
+
+.perfilIcon{
+
+    margin-left: 40px;
+    vertical-align: bottom;
+    font-size: 20px;
+}
+
+.perfilIconEdit{
+    margin-left: 660px;
+    vertical-align: bottom;
+    font-size: 20px;
+    background-color: white;
+    color:black;
+}
+
+.titulo{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.perfilIconEdit2{
+    margin-left: 740px;
+    vertical-align: bottom;
+    font-size: 20px;
+    background-color: white;
+    color:black;
+}

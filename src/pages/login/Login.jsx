@@ -8,8 +8,9 @@ import {StatusCodes} from "http-status-codes";
 import {UserIdContext} from "../../context/UserIdContext";
 
 
+
 export default function Login() {
-    const {userId, setUserId} = useContext(UserIdContext);
+    const {setUserId}= useContext(UserIdContext);
 
 
     let navigate = useNavigate();
@@ -17,6 +18,7 @@ export default function Login() {
     const email = useRef(null);
     const password = useRef(null);
     const url = 'http://localhost:8080/v1/gestion-emprendedor/login';
+
 
 
     const handleClick = async (e) => {
@@ -36,6 +38,7 @@ export default function Login() {
         }
 
     };
+
 
 
     return (
@@ -59,8 +62,7 @@ export default function Login() {
                             <input placeholder="Contraseña" className="loginInput" type="password" required
                                    ref={password}/>
                             <button className="loginButton" type="submit"
-                            > Iniciar Sesión
-                            </button>
+                            > Iniciar Sesión</button>
                             <span className="miembro">¿Olvidaste tu contraseña?</span>
                             <span className="recuperarContraseña"><button className="recoverPasswordButton">Recuperar contraseña</button></span>
 

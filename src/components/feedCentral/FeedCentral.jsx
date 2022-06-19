@@ -12,7 +12,7 @@ export default function FeedCentral() {
     return (
         <div>
             <div className="feedWrapper">
-                {<Publicar/>}
+                <Publicar/>
 
                 {loading && <p className="loading">Loading...</p>}
                 {posts.map((p) => (

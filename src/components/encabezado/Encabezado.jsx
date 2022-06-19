@@ -5,6 +5,7 @@ import React from "react";
 export default function Encabezado() {
 
            return (
+               <div className="topbarContainer">
             <div className="encabezadoContainer">
                 <div className="cabeceraTop">
                     <div className="cabecera">
@@ -12,6 +13,7 @@ export default function Encabezado() {
                     </div>
                 </div>
             </div>
+               </div>
             );
 
 

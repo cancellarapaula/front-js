@@ -5,7 +5,7 @@ import {StatusCodes} from "http-status-codes";
 
 
 export const useFetchMyPosts = async () => {
-    const {userId, setuserId}= useContext(UserIdContext);
+    const {userId}= useContext(UserIdContext);
     const [state, setState] = useState({
         data: [],
         loading: true
