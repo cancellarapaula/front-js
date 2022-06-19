@@ -1,7 +1,4 @@
-
-
-
-export const getUsers = async()  => {
+export const getUsers = async () => {
 
 
     const url = 'http://localhost:8080/v1/gestion-emprendedor/login';
@@ -9,14 +6,14 @@ export const getUsers = async()  => {
     const data = await resp.json();
 
 
-    const userId = data.map( user => {
+    const userId = data.map(user => {
         return {
 
             id: userId.id
 
         }
     })
-    console.log(userId);
+
 
     return posts;
 

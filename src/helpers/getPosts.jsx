@@ -1,7 +1,4 @@
-
-
-
-export const getPosts = async()  => {
+export const getPosts = async () => {
 
 
     const url = 'http://localhost:8082/v1/gestion-proyectos/proyectos/todos';
@@ -9,7 +6,7 @@ export const getPosts = async()  => {
     const data = await resp.json();
 
 
-    const posts = data.map( post => {
+    const posts = data.map(post => {
         return {
 
             id: post.id,
@@ -23,7 +20,6 @@ export const getPosts = async()  => {
 
         }
     })
-    //console.log(posts);
 
     return posts;
 

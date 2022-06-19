@@ -5,8 +5,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 export default function Post({post}) {
-    console.log(post);
-    return(
+    return (
         <div className="post">
             <div className="postWrapper">
                 <div className="postTop">
@@ -30,7 +29,7 @@ export default function Post({post}) {
                     <p className="informacion"> {post.nombre}</p>
                     <p className="titulo"> Descripción del proyecto </p>
                     <p className="informacion">{post.descripcion}</p>
-                    <p className="titulo"> Vacantes disponibles  </p>
+                    <p className="titulo"> Vacantes disponibles </p>
                     {/*<p className="informacion"> {post.vacantes}</p>*/}
                     <p className="titulo"> Monto mínimo de inversión </p>
                     <p className="informacion">{post.monto_minimo_inversion} </p>
@@ -38,7 +37,7 @@ export default function Post({post}) {
                 <div className="postBottom">
                     <div className="postBottomIzq">
                         <ThumbUpIcon className="likeIcon" htmlColor="#3F7FD4"/>
-                        <FavoriteIcon className="likeIcon" htmlColor="#E85461" />
+                        <FavoriteIcon className="likeIcon" htmlColor="#E85461"/>
                     </div>
 
                 </div>

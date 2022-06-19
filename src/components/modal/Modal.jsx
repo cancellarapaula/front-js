@@ -11,7 +11,6 @@ import {VacanteTable} from "../vacanteTable/VacanteTable";
 import AddVacanteForm from "../addVacanteForm/AddVacanteForm";
 import {UserIdContext} from "../../context/UserIdContext";
 import {getGeneric} from "../../helpers/getGeneric";
-import {Vacantes} from "../../models/Vacantes";
 import {postGeneric} from "../../helpers/PostGeneric";
 import {StatusCodes} from "http-status-codes";
 
@@ -31,7 +30,7 @@ const Modal = ({estado, cambiarEstado}) => {
     });
 
 
-    useEffect( () => {
+    useEffect(() => {
         const getHabilidades = async () => {
             const {data, statusCode} = await getGeneric(url2)
             setHabilidad(data.habilidades)
@@ -40,43 +39,26 @@ const Modal = ({estado, cambiarEstado}) => {
     }, [])
 
 
-    //////////////////////
-
-
     const vacanteData = [];
     const [vacante, setVacante] = useState(vacanteData);
     const [vacanteId, setVacanteId] = useState(vacanteData);
     const {userId} = useContext(UserIdContext);
     const idDueño = userId;
     const estadoProy = 1;
-    let vacanteProyecto = new Vacantes(4, 'DESCRIPCION', 1);
-    let listaVacantes =[];
-    let listaVacantes2 =[];
-    console.log(vacanteProyecto)
-  // listaVacantes.push(vacanteProyecto)
+    let listaVacantes = [];
 
-   listaVacantes=vacanteId;
-    console.log("listaVacantes")
-    console.log(listaVacantes)
-
-    // if( vacanteId.length > 0 ){
-    //     (vacanteId.map((v)=>{
-    //         listaVacantes.push(v);
-    //     }))}
+    listaVacantes = vacanteId;
 
     const handleClick = async () => {
 
 
         let proyecto = new Proyecto(nombre.current.value,
-                                    descripcion.current.value,
-                                    estadoProy,
-                                    idDueño,
-                                    Number(montoMinimo.current.value),
-                                    listaVacantes)
+            descripcion.current.value,
+            estadoProy,
+            idDueño,
+            Number(montoMinimo.current.value),
+            listaVacantes)
 
-        console.log(proyecto)
-        console.log("vacantes del proyecto")
-        console.log(proyecto.vacantes)
 
         const {data, statusCode} = await postGeneric(url, proyecto)
 
