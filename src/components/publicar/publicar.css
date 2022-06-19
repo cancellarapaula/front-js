@@ -1,0 +1,86 @@
+.publicar {
+    width: 550px;
+    height: 170px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+}
+
+.publicarWrapper {
+    padding: 10px;
+}
+
+.publicarTop {
+    display: flex;
+    align-items: center;
+}
+
+.publicarImgPerfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.publicarText {
+    border: none;
+    width: 80%;
+    font-size: 18px;
+    margin: 0 10px;
+    margin-top: 10px;
+    color: grey;
+}
+
+
+
+.publicarHr {
+    margin: 10px;
+}
+
+.publicarBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 33px;
+
+}
+
+.publicarOpciones{
+    display: flex;
+    justify-content: center;
+
+}
+
+.publicarOpcion{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.shareIcon{
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.shareOptionText{
+    font-size: 16px;
+    font-weight: 500;
+    border:none;
+    background-color: white;
+}
+
+.publicarButton {
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: #3B5BCD;
+    font-weight: 700;
+    margin-right: 20px;
+    cursor: pointer;
+    color: white;
+}
+

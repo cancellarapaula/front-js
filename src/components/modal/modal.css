@@ -1,0 +1,117 @@
+.input{
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+}
+
+.component-input-label{
+
+    font-size: 18px;
+    color: #000000;
+    font-weight: 550;
+
+    width: 100%;
+
+}
+.component-input-label-vacante{
+
+    font-size: 18px;
+    color: #000000;
+    font-weight: 550;
+
+    width: 25%;
+
+}
+.component-input-input{
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid dimgray;
+    font-size: 18px;
+    padding-left: 20px;
+
+    top: 15px;
+}
+
+.component-input-vacante{
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid dimgray;
+    font-size: 18px;
+    padding-left: 20px;
+
+    top: 15px;
+}
+
+
+.component-input-input2{
+    min-height: 250px;
+    border-radius: 8px;
+    border: 1px solid dimgray;
+    font-size: 18px;
+    padding-left: 20px;
+
+    top: 10px;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(179, 179, 179);
+
+}
+
+
+.publicarHr {
+    margin: 20px;
+}
+
+.publicarBottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.agregarVacanteBottom {
+    display:flow;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.publicarOpciones{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.publicarOpcion{
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.publicarButton{
+    width:100%;
+    background-color:  #3B5BCD;
+    margin-top: 30px;
+}
+
+.descripcion {
+
+    width: 100%;
+    overflow: hidden;
+}
+
+.addIcon{
+    margin-left:30px;
+}
+
+
