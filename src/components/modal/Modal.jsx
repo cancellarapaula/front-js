@@ -35,6 +35,7 @@ const Modal = ({estado, cambiarEstado}) => {
         const getHabilidades = async () => {
             const {data, statusCode} = await getGeneric(url2)
             setHabilidad(data.habilidades);
+
         }
         getHabilidades()
     }, [])
@@ -49,10 +50,10 @@ const Modal = ({estado, cambiarEstado}) => {
     let vacanteProyecto = new Vacantes(4, 'DESCRIPCION', 1);
     let listaVacantes = [];
     let listaVacantes2 = [];
-    console.log(vacanteProyecto)
+   // console.log(vacanteProyecto)
     listaVacantes.push(vacanteProyecto)
     //listaVacantes=vacanteId;
-    console.log(listaVacantes)
+   // console.log(listaVacantes)
 
     // if( vacanteId.length > 0 ){
     //     (vacanteId.map((v)=>{
@@ -69,9 +70,9 @@ const Modal = ({estado, cambiarEstado}) => {
             Number(montoMinimo.current.value),
             listaVacantes)
 
-        console.log(proyecto)
+       /* console.log(proyecto)
         console.log("vacantes del proyecto")
-        console.log(proyecto.vacantes)
+        console.log(proyecto.vacantes)*/
 
         const {data, statusCode} = await postGeneric(url, proyecto)
 
