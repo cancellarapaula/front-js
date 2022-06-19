@@ -21,7 +21,7 @@ export default function Feed() {
             <Encabezado/>
             <div className="homeContainer">
                 <Menufeed/>
-                <FeedCentral/>
+               { <FeedCentral/>}
                 <FeedDerecho/>
             </div>
         </>

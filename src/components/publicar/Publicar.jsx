@@ -1,12 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import "./publicar.css";
 import CreateIcon from '@mui/icons-material/Create';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import {Modal} from '../modal/Modal';
-
-
-
-
 
 
 export default function Publicar() {
